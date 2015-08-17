@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="CollectionViewSource.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CollectionViewSource"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    RequestedTheme="Dark">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
+        <Grid.Resources>
+            <CollectionViewSource x:Name="CVSInfo" IsSourceGrouped="true" ItemsPath="Decks"/>
+        </Grid.Resources>
+        <ListView x:Name="ListViewCVS" ItemsSource="{Binding Source={StaticResource CVSInfo}}">
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic Pivot", "Sandbox\Dynamic Pivot.csproj", "{B4A6D052-FBA7-45E8-BB14-8FF8B7847ED2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionViewSource", "CollectionViewSource\CollectionViewSource.csproj", "{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -33,6 +35,24 @@ Global
 		{B4A6D052-FBA7-45E8-BB14-8FF8B7847ED2}.Release|x86.ActiveCfg = Release|x86
 		{B4A6D052-FBA7-45E8-BB14-8FF8B7847ED2}.Release|x86.Build.0 = Release|x86
 		{B4A6D052-FBA7-45E8-BB14-8FF8B7847ED2}.Release|x86.Deploy.0 = Release|x86
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|ARM.Build.0 = Debug|ARM
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|ARM.Deploy.0 = Debug|ARM
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|x64.ActiveCfg = Debug|x64
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|x64.Build.0 = Debug|x64
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|x64.Deploy.0 = Debug|x64
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|x86.ActiveCfg = Debug|x86
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|x86.Build.0 = Debug|x86
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Debug|x86.Deploy.0 = Debug|x86
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|ARM.ActiveCfg = Release|ARM
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|ARM.Build.0 = Release|ARM
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|ARM.Deploy.0 = Release|ARM
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|x64.ActiveCfg = Release|x64
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|x64.Build.0 = Release|x64
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|x64.Deploy.0 = Release|x64
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|x86.ActiveCfg = Release|x86
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|x86.Build.0 = Release|x86
+		{32DAA8F1-E1A5-4A8C-AD42-5DF30F5FE31E}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
