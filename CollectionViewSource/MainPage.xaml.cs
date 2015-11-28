@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,40 +24,63 @@ namespace CollectionViewSource
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public List<Subset> subsets = new List<Subset>();
+        public ObservableCollection<Subset> subsets = new ObservableCollection<Subset>();
 
         public MainPage()
         {
             this.InitializeComponent();
 
             // Adding Subsets, each with a list of Decks
-            subsets.Add(new Subset() { Name = "Chemistry",
-                Decks = new List<Deck>() {
+            for (int i = 3; i >= 0; i--)
+            {
+                subsets.Add(new Subset()
+                {
+                    Name = "Chemistry",
+                    Decks = new List<Deck>() {
+                    new Deck() { Name = "Polyatomic Ions" },
+                    new Deck() { Name = "Periodic Table" },
+                    new Deck() { Name = "Famous Chemists" },
+                    new Deck() { Name = "Polyatomic Ions" },
+                    new Deck() { Name = "Periodic Table" },
+                    new Deck() { Name = "Famous Chemists" },
+                    new Deck() { Name = "Polyatomic Ions" },
+                    new Deck() { Name = "Periodic Table" },
+                    new Deck() { Name = "Famous Chemists" },
+                    new Deck() { Name = "Polyatomic Ions" },
+                    new Deck() { Name = "Periodic Table" },
+                    new Deck() { Name = "Famous Chemists" },
+                    new Deck() { Name = "Polyatomic Ions" },
+                    new Deck() { Name = "Periodic Table" },
+                    new Deck() { Name = "Famous Chemists" },
                     new Deck() { Name = "Polyatomic Ions" },
                     new Deck() { Name = "Periodic Table" },
                     new Deck() { Name = "Famous Chemists" }
                 }
-            });
+                });
 
-            subsets.Add(new Subset()
-            {
-                Name = "History",
-                Decks = new List<Deck>() {
+                subsets.Add(new Subset()
+                {
+                    Name = "History",
+                    Decks = new List<Deck>() {
                     new Deck() { Name = "US Presidents" },
                     new Deck() { Name = "Constitutional Amendments" },
                     new Deck() { Name = "The Crusades" }
                 }
-            });
+                });
 
-            subsets.Add(new Subset()
-            {
-                Name = "English",
-                Decks = new List<Deck>() {
+                subsets.Add(new Subset()
+                {
+                    Name = "English",
+                    Decks = new List<Deck>() {
                     new Deck() { Name = "US Presidents" },
                     new Deck() { Name = "Constitutional Amendments" },
                     new Deck() { Name = "The Crusades" }
                 }
-            });
+                });
+
+            }
+
+            this.DataContext = subsets;
 
             //Setting the source of the XAML CVS
             CVSInfo.Source = subsets;

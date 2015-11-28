@@ -12,19 +12,21 @@
         <Grid.Resources>
             <CollectionViewSource x:Name="CVSInfo" IsSourceGrouped="true" ItemsPath="Decks"/>
         </Grid.Resources>
-        <ListView x:Name="ListViewCVS" ItemsSource="{Binding Source={StaticResource CVSInfo}}">
+        <ListView x:Name="ListViewCVS" ItemsSource="{Binding Source={StaticResource CVSInfo}}" CanReorderItems="True" AllowDrop="True" SelectionMode="Multiple">
             <ListView.GroupStyle>
                 <GroupStyle>
                     <GroupStyle.HeaderTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Name}"/>
+                            <StackPanel Background="DarkCyan">
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="10, 5, 100, 5" />
+                            </StackPanel>
                         </DataTemplate>
                     </GroupStyle.HeaderTemplate>
                 </GroupStyle>
             </ListView.GroupStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
